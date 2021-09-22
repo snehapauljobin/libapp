@@ -1,0 +1,60 @@
+<div class="banner">
+
+</div><br><br>
+<!------------------Aside contents------------------->
+<section class="contents">
+<div class="container">
+  <div class="row">
+  
+    <br>
+    <br>
+    <h5 style="color:rgb(135, 99, 7);">Our collection</h5>
+  <p style="font-family: cursive;">The library has a rich collection of books, Journals, Maps, Microfiche, CDs, Theses, and Dissertations. A good number of books are added every year.  The collection of books has now crossed 3.5 Lakhs and continues to grow at the rate of more than 5000 titles annually. Bound volumes more than 1000 journal titles take pride of place of the collection. The library subscribes to 43 foreign Journals, over 400 Indian periodicals, 35 popular magazines and 20 Newspapers.</p><br>
+  
+   
+  
+  </div></div>
+</section>
+  <br>
+  <br>
+
+   
+<!------------------Books------------------->
+
+  
+              
+ 
+<br><br>
+ 
+<!--/stories-->  
+<div class="container">
+  <div class="row" style="margin-left: 100px;">       
+
+  <div class="col-sm-6" *ngFor="let book of books"> 
+  
+      <div class="card" style="width: 20rem;">
+<img class="card-img-top"  style="height: 15rem; border-radius: 10px;"  [src]='book.imgfile' alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title" style="color:black; height:20px; text-align:center;">{{book.title}}</h5>
+ </div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item" style= "font-family:cursive; height:40px;">{{book.author}}</li>
+  <li class="list-group-item" style= "font-family:cursive;height:40px;">{{book.genre}}</li>
+  <li class="list-group-item" style= "font-family:cursive;height:40px;">{{book.language}}</li>
+</ul>
+<div class="card-body">
+  <button class="card-link" style= "font-family:cursive; color:black; height:40px;" (click)=" getindvbook(book)">Read More</button>
+
+
+</div><br> </div><br> <br><br>
+     <br>
+      </div>
+     
+     
+     
+    
+    </div>
+    
+
+  
+  </div>

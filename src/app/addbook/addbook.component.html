@@ -1,0 +1,68 @@
+<br>
+<br>
+<br>
+
+<div class="container" style="width:60%">
+  <br>
+ 
+      <form name="myform" class="form-group" #addbook="ngForm" (ngSubmit)="AddBook()" style="margin-left: 30px;">
+       <div class="row">
+        
+
+       <div class="col-md-5 form-group"> 
+       <input type="text" class="form-control col-sm-6" id="title" name="title" #title="ngModel" required placeholder="Enter the Book title" [(ngModel)]="bookItem.title"style="font-family:cursive;">
+       <small [class.d-none]="title.dirty" style="font-family: cursive; color:whitesmoke">Enter the title of book</small> <br><br>
+      </div>
+          <div class="col-md-1"></div><br>
+        <div class="col-md-5 form-group">
+       <input type="text col-sm-6" class="form-control" id="author" name="author"  #author="ngModel" required placeholder="Enter the Author's name" [(ngModel)]="bookItem.author"style="font-family:cursive;">
+       <small [class.d-none]="author.dirty" style="font-family: cursive; color:whitesmoke">Enter Author</small><br><br>
+          </div></div>
+
+        <div class="row">
+        <div class="col-md-5">
+       <input type="text" class="form-control col=sm-6" id="genre" name="genre"  #genre="ngModel" required placeholder="Enter the Genre" [(ngModel)]="bookItem.genre" style="font-family:cursive;">
+       <small [class.d-none]="genre.dirty" style="font-family: cursive;color:whitesmoke">Enter the genre</small><br><br>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+       <input type="text" class="form-control col=sm-6" id="language" name="language"  #language="ngModel" required placeholder="Enter the language" [(ngModel)]="bookItem.language"style="font-family:cursive;">
+       <small [class.d-none]="language.dirty" style="font-family: cursive;color:whitesmoke">Enter the language</small><br><br>
+          </div></div>
+      
+          <div class="row">
+          <div class="col-md-5">
+       <textarea placeholder="Enter description here.."  id="textitems" name="info"  #info="ngModel"  required [(ngModel)]="bookItem.info" class="form-control col'sm-6" rows="6" cols="43" style="font-family:cursive;"></textarea>
+       <small [class.d-none]="info.dirty" style="font-family: cursive;color:whitesmoke">Enter more details</small><br><br>
+          </div>
+       
+          <div class="col-md-1"></div>
+
+        <div class="col-md-5">
+       <input type="file"  name="image" class="form-control col'sm-6" id="input" (change)="onFileSelected($event)"  required  accept="image/*" style="font-family:cursive;">
+       <!-- <small [class.d-none]="preview.dirty" style="font-family: cursive;color:whitesmoke">Upload image of book</small> -->
+       <br>
+         <img [src]="imageUrl" id="preview">
+          
+        </div></div>
+
+         <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="butt" style="text-align:center; font-family:cursive; margin-left: 290px;" [disabled]='addbook.form.invalid ||imageUrl==undefined'>Add</button>
+          </div>
+        </div>  
+        
+       
+      </form>
+    
+
+  </div> 
+
+  
+  
+  
+  
+  
+  
+  
+  

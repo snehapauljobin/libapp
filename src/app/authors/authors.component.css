@@ -1,0 +1,53 @@
+.banner{
+
+    background: radial-gradient(rgba(0,0, 0, 0.5), #152401),url(/assets/img/forbooks.jpg);
+    background-position: center; 
+    background-size: cover; 
+    height: 200px;
+    width:auto;
+    color:#fff;
+}
+    h5,h4{
+        text-align:center;
+        font-family:cursive;
+        color:white;
+    }
+    
+
+ /*-----------------Aside contents---------------*/
+
+
+ .col-sm-6 p{
+    text-align: justify;
+ }
+
+ .container p{
+     font-size: 14px;
+     text-align: justify;
+ }
+ /* ------------Books--------------------- */
+
+  .row h4, h5{
+      float:left;
+      
+  }
+ 
+ 
+ .col-sm-9 h3{
+    color: white;
+    font-family:cursive;
+ }
+  .text-muted h4{
+    color:white;
+    
+ } 
+ #footer{
+     text-align: center;
+     color: #fff;
+     height:20px;
+     width: 100%;
+ }
+.card{
+    box-shadow: 10px 10px 10px #c4b26c;
+}
+ 

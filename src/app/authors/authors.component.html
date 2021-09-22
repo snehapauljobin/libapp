@@ -1,0 +1,67 @@
+<div class="banner">
+
+</div><br><br><br>
+<br>
+
+
+<!------------------Aside contents------------------->
+<section class="contents">
+<div class="container">
+  <div class="row">
+  
+    <br>
+    <br>
+    <h5 style="color:rgb(135, 99, 7);">Meet our Authors</h5>
+  <p style="font-family: cursive;">Keep up with your favorite authors’ work, publications and career. Discover new voices by browsing our bestselling and award-winning authors. Get all the latest news about the authors you love. Besides catering to the  needs of public and students, the Library also has a profound collection of reference sources related to authors of different genre. </p><br>
+  
+   
+  
+  </div>
+
+  <br>
+  <br>
+  
+<!------------------Authors------------------->
+
+ 
+  
+    
+        
+          
+              
+ 
+  <br><br>
+ 
+  <!--/stories-->  
+  <div class="container">  
+    <div class="row" style="margin-left: 100px;"> 
+    
+            
+  
+   
+    <div class="col-sm-6" *ngFor="let author of authors">
+    
+        <div class="card" style="width: 20rem;">
+  <img class="card-img-top"  style="height: 15rem; border-radius: 10px;"  [src]='author.imgfile' alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title" style="color:black; height:20px; text-align:center;">{{author.author}}</h5>
+   </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" style= "font-family:cursive; height:40px;">{{author.genre}}</li>
+    <li class="list-group-item" style= "font-family:cursive;height:40px;">{{author.books}}</li>
+    <li class="list-group-item" style= "font-family:cursive;height:40px;">{{author.language}}</li>
+  </ul>
+  <div class="card-body">
+    <button class="card-link" style= "font-family:cursive; color:black; height:40px;" (click)=" getindvauthor(author)">Read More</button>
+
+
+
+        </div>
+        <br><br></div><br><br><br><br>
+       
+       
+       
+       </div> 
+      </div>
+    
+    </div>

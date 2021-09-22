@@ -1,0 +1,45 @@
+
+
+
+<section class="login py-5">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-5">
+                <img src="/assets/img/signinlib.jpg" class="img-fluid" alt= "">
+            </div>
+            <div class="col-lg-7 text-center py-4">
+                <h5  style="font-family: cursive;">Log in</h5>
+                <form  (ngSubmit) ="loginUser()">
+                     <div class="form-row py-2 pt-5"> 
+                      <div class="offset-1 col-lg-10 form-group">
+                          <input type="text"  class="inp px-3 form-control" id= "email" name="email" [(ngModel)]="User.email"  #email="ngModel" placeholder="Email" pattern="^[a-z0-9.%]+@[a-z0-9.-]+\.[a-z]{2,4}"required style="font-family: cursive;" [class.is-invalid]="email.invalid &&email.touched"><br>
+                         <small [class.d-none]="email.valid || email.touched" style="font-family: cursive;">Enter Valid Email</small>
+                      </div>     
+
+                    </div>
+                    <div class="form-row py-3">
+                        <div class="offset-1 col-lg-10 form-group">
+                
+                            <input type="password"  class="inp px-3 form-control"  id="password" name="password" [(ngModel)]="User.password"  #password="ngModel" placeholder="Password" required style="font-family: cursive;" [class.is-invalid]="password.invalid && password.touched"><br>
+                            <small [class.d-none]="password.valid || password.touched" style="font-family: cursive;">Enter your password</small>
+    
+                      </div>
+  
+                      </div>
+                      <div class="form-row">
+                        <div class="offset-1 col-lg-10">
+                           <button class="btn1"  style="font-family: cursive;">Submit</button>
+                           
+                        </div>    
+  
+                      </div> 
+                  </form>
+               
+            </div>
+
+            
+
+
+        </div>
+    </div>
+</section>

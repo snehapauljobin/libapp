@@ -1,0 +1,166 @@
+<script src="https://kit.fontawesome.com/7e3306a0d5.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7e3306a0d5.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="banner">
+    <div class="header">
+        <h2>"When in doubt go to the library"<br><br><small style="font-family: cursive;">J.K. ROWLING</small> </h2>
+        </div>
+</div>
+<br>
+<br>
+
+
+<!------------------Aside contents------------------->
+<section class="contents">
+<div class="container aside">
+  <div class="row">
+  
+    <br>
+    <br>
+    <h5>At a Glance</h5>
+  <p style="font-family: cursive;">The Central Library is one of the oldest Libraries in India.In order to use the library services one has to register and become a member of the library. The library subscribes 25 dailies and 225 journals including foreign journals.The library has a total collection of 455274 documents in different languages such as English, Malayalam, Hindi, Tamil, Sanskrit in various disciplines.
+ Summer school that starts in April and lasts a month. Admission is available for students of 5th to 9th standards.The aim of Summer school is to develop reading habits among children through entertainment.</p></div>
+<br>
+  
+   
+  
+  </div>
+</section>
+  <br>
+  <br>
+  
+  
+
+  
+ 
+
+
+  <!--------------------------Icons and Cards------------------------------------->
+  <section id="booksauthors">
+  
+    <div class="container">
+      
+    <div class="row">
+     
+     <div class="col-sm-3">
+     
+      <div class="card border-0" style="width: 15rem;">
+        <h5>Authors</h5>
+        <a routerLink="/authors"  *ngIf="_auth.loggedIn()"> <i class="fa fa-edit icons fa-vc"></i></a><br>
+    
+    <p class="card-text" style="font-family: cursive;"> Get current affairs related to Authors and their publications.
+    </p>
+  </div>
+  </div> 
+  
+      <div class="col-sm-3">
+      <div class="card border-0" style="width: 15rem;">
+        <h5>Books</h5>
+        <a routerLink="/books"  *ngIf="_auth.loggedIn()"><i class="fa fa-book icons fa-vc"></i></a><br>
+  
+        
+      <p class="card-text" style="font-family: cursive;">Collection of   455274 documents in various languages.</p>
+   </div>
+      </div>
+
+
+  <div class="col-sm-3">
+    <div class="card border-0" style="width: 15rem;">
+      <h5>Add Books</h5>
+      <a routerLink="/addbook"  *ngIf="_auth.loggedIn() &&_auth.roleIn()" >  <i class="fa fa-sign-in icons fa-vc" aria-hidden="true"></i></a><br>
+
+    <p class="card-text" style="font-family: cursive;">Provision to add new books to the collection.</p>
+</div>
+  </div>
+
+ 
+
+
+  <div class="col-sm-3">
+    <div class="card border-0" style="width: 15rem;">
+      <h5>Add Authors</h5>
+      <a routerLink="/addauthor"  *ngIf="_auth.loggedIn() &&_auth.roleIn()" ><i class="fa fa-sign-in icons fa-vc" aria-hidden="true"></i></a><br>
+
+    <p class="card-text" style="font-family: cursive;">Provision to add new authors to the collection.</p>
+</div>
+  </div> 
+    </div></div>
+<br><br><br>
+</section>
+
+<br><br>
+
+ <!------------------------New Arrivals--------------------->
+ <h4>New Arrivals</h4><br><br><br><br>
+ <br><br><br><br>
+ <section id="photos">
+
+<div class="container">
+<div class="row">
+
+ <div class="col-sm-3">
+ <div class="wrapper">
+ <div class="img-area">
+ <div class="img-animation">
+ 
+ <img class="front-side" src="/assets/img/aadujeevithamfront.jpg">
+ <div class="back-side" style="background:#8b5d06; font-family: cursive;"> 
+   Aadujeevitham is a Malayalam novel about an abused migrant worker in Saudi Arabia written by Bahrain-based Indian author Benyamin.</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-sm-3">
+ <div class="wrapper">
+ <div class="img-area">
+ <div class="img-animation">
+ 
+ <img class="front-side" src="/assets/img/four winds.jpg">
+ <div class="cfb-face cfb-back cfb-data cfb-image back-side" style="background:#8b5d06; font-family: cursive;"> 
+   The Four Winds by Kristin Hannah is a captivating, heartbreaking tale of a family who will do anything for each other to survive.</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-sm-3">
+ <div class="wrapper">
+ <div class="img-area">
+ <div class="img-animation">
+ 
+ <img class="front-side" src="/assets/img/onelast stop.jpg">
+ <div class="cfb-face cfb-back cfb-data cfb-image back-side" style="background:#8b5d06; font-family: cursive;"> 
+   Casey McQuiston's One Last Stop is a delightful speculative tale that follows August Landry, a somewhat cynical mystery lover.</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="col-sm-3">
+ <div class="wrapper">
+ <div class="img-area">
+ <div class="img-animation">
+ 
+ <img class="front-side" src="/assets/img/karnan.jpg">
+ <div class="cfb-face cfb-back cfb-data cfb-image back-side" style="background:#8b5d06; font-family: cursive;"> 
+   Karnan is a book based on Mahabharatha epic, originally written by a marathi novelist and translated in to various languages.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+

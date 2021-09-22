@@ -1,0 +1,69 @@
+<br>
+
+
+<div class="container" style="width:60%">
+  <br>
+ 
+      <form name="myform" class="form-group" #updateform="ngForm" (ngSubmit)="updatebook()" style="margin-left: 30px;">
+       <div class="row">
+        
+
+       <div class="col-md-5 form-group"> 
+        <label class="control-label col-sm-6" style="color:whitesmoke; font-family:cursive;" for="title">Title</label>
+       <input type="text" class="form-control col-sm-6" id="title" name="title" required [(ngModel)]="bookItems.title" placeholder="Enter the Book title" style="font-family:cursive;">
+      <br>
+          </div><br>
+          <div class="col-md-1"></div>
+        <div class="col-md-5 form-group">
+            <label class="control-label col-sm-6" style="color:whitesmoke; font-family:cursive;" for="title">Author</label>
+       <input type="text col-sm-6" class="form-control" id="author" name="author" required [(ngModel)]="bookItems.author"   placeholder="Enter the Author's name" style="font-family:cursive;">
+      <br>
+          </div></div>
+
+        <div class="row">
+        <div class="col-md-5 form-group">
+            <label class="control-label col-sm-6" style="color:whitesmoke; font-family:cursive;" for="title">Genre</label>
+      
+       <input type="text" class="form-control col=sm-6" id="genre" name="genre" required [(ngModel)]="bookItems.genre"   placeholder="Enter the Genre" style="font-family:cursive;">
+       <br>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5 form-group">
+            <label class="control-label col-sm-6" style="color:whitesmoke; font-family:cursive;" for="title">Language</label>
+       
+       <input type="text" class="form-control col=sm-6" id="language" name="language" required [(ngModel)]="bookItems.language" placeholder="Enter the language" style="font-family:cursive;">
+       <br>
+          </div></div>
+      
+          <div class="row">
+          <div class="col-md-5 form-group">
+            <label class="control-label col-sm-6" style="color:whitesmoke; font-family:cursive;" for="title">Synopsis</label>
+       
+       <textarea  placeholder="Enter description here.."  id="textitems" name="info"  required class="form-control col'sm-6" rows="6" cols="43" style="font-family:cursive;" [(ngModel)]="bookItems.info"> </textarea>
+       <br>
+          </div>
+       
+          <div class="col-md-1"></div>
+
+        <div class="col-md-5">
+            <label class="control-label col-sm-6" style="color:whitesmoke; font-family:cursive;" for="title">Image</label>
+       
+       <input type="file"  name="image" class="form-control col'sm-6" id="input"  required (change)="onFileSelected($event)"  accept="image/*" style="font-family:cursive;">
+       
+       <br>
+       <img [src]="imageUrl" id="preview">
+       <input  name="id" class="form-control col'sm-6"   type="hidden" value='' style="font-family:cursive;">
+        </div></div>
+
+         <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="butt" style="text-align:center; font-family:cursive; margin-left: 290px;" [disabled]="updateform.form.invalid" >Update</button>
+          </div>
+        </div>  
+        
+       
+      </form>
+    
+
+  </div> 
+

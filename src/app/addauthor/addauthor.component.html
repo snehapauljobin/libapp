@@ -1,0 +1,64 @@
+<br>
+
+
+<div class="container" style="width:60%"><br>
+  <div class="row">
+  
+ 
+      <form name="myform" class="form-group"  #addauthor="ngForm" (ngSubmit)="AddAuthor()" style="margin-left: 30px;">
+       <div class="row">
+        
+
+       <div class="col-md-5"> 
+       
+       <input type="text" class="form-control col-sm-6" name="author" id="author" #author="ngModel" [(ngModel)]="authorItem.author"required placeholder="Enter the name of Author" style="font-family:cursive;">
+       <small [class.d-none]="author.touched" style="font-family: cursive; color:whitesmoke">Enter name of Author</small> <br><br>
+          </div>
+          <div class="col-md-1"></div>
+        <div class="col-md-5"> 
+       <input type="text col-sm-6" class="form-control" id="genre" name="genre" #genre="ngModel" [(ngModel)]="authorItem.genre"required placeholder="Enter the Genre" style="font-family:cursive;">
+       <small [class.d-none]="genre.touched" style="font-family: cursive; color:whitesmoke">Enter the genre</small> <br><br>
+          </div></div>
+
+        <div class="row">
+        <div class="col-md-5">
+       <input type="text" class="form-control col=sm-6" id="books" name="books" #books="ngModel" [(ngModel)]="authorItem.books" required placeholder="Enter the books" style="font-family:cursive;">
+       <small [class.d-none]="books.touched" style="font-family: cursive; color:whitesmoke">Enter the books published</small> <br><br>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+       <input type="text" class="form-control col=sm-6" id="language" name="language" #language="ngModel" [(ngModel)]="authorItem.language"required placeholder="Enter the language" style="font-family:cursive;">
+       <small [class.d-none]="language.touched" style="font-family: cursive; color:whitesmoke">Enter medium of Author</small> <br><br>
+          </div></div>
+      
+          <div class="row">
+          <div class="col-md-5">
+       <textarea placeholder="Enter more about Author here.." name="info" id="textitems" #info="ngModel" [(ngModel)]="authorItem.info" required class="form-control col'sm-6" rows="6" cols="43" style="font-family:cursive;"></textarea>
+       <small [class.d-none]="info.touched" style="font-family: cursive; color:whitesmoke">Enter more details about Author</small> <br><br>
+          </div>
+       
+
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+       <input type="file"  name="image" class="form-control col'sm-6" id="input" (change)="onFileSelected($event)"  required accept="image/*" style="font-family:cursive;">
+       <!-- <small [class.d-none]="image.touched" style="font-family: cursive; color:whitesmoke">Enter the image of Author</small> <br><br> -->
+       
+       <br>
+         <img [src]="imageUrl" id="preview"> 
+         
+       <!-- <input  name="imageurl" class="form-control col'sm-6" #imgfile="ngModel" required type="hidden"  [(ngModel)]="authorItem.imgfile"style="font-family:cursive;"> -->
+
+        </div></div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="butt" style="text-align:center; font-family:cursive; margin-left: 290px;"[disabled]='addauthor.form.invalid || imageUrl==undefined'>Add</button>
+          </div>
+        </div>  
+        </form></div>
+       
+      
+    
+
+  
+

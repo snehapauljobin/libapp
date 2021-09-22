@@ -1,0 +1,20 @@
+.container{
+    background-color:  rgb(141, 116, 70);
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 15px;
+    width:30%;
+}
+.butt{
+    width:20% !important;
+    background: white;
+    outline: none !important;
+    border:2px solid #fff !important;
+    border-radius:10px !important;
+    color:black;
+    justify-content: center!important;
+}
+#preview{
+    width:100px;
+    height:100px;
+}

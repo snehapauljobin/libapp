@@ -1,0 +1,85 @@
+<div class="banner"><br><br>
+<div class="container">
+    <div class="col-lg-4"></div>
+    
+      <form #signup="ngForm" (ngSubmit)="AddUser()">
+    <div class="row  col-lg-4 offset-lg-4">
+        <header  style="font-family: cursive;">SIGN UP</header><br><br>
+
+        <div class="form-group">
+          <input class="myInput form-control" type="text" placeholder="Name" required minlength="3" id="username1" #name="ngModel" name="name" style="font-family: cursive;" [(ngModel)]="Customer.name" [class.is-invalid]="name.invalid && name.touched">
+         <div *ngIf="name.errors && (name.dirty ||name.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px;">
+             <div [hidden]="!name.errors.required" >
+                Please enter a name
+             </div>
+             <div [hidden]="!name.errors.minlength">
+                Please enter minimum3 characters
+             </div>
+          </div>
+</div><br>
+        <div class="form-group">
+          <input class="myInput form-control" type="text" required placeholder="Phone Number (10 digit)" pattern="^\(?([0-9]{3})\)?[- ]?([0-9]{3})[- ]?([0-9]{4})" #phonenumber="ngModel" id="phonenumber" name="phonenumber" [(ngModel)]="Customer.phonenumber"style="font-family: cursive;">
+          <div *ngIf="phonenumber.errors && (phonenumber.dirty ||phonenumber.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px;">
+            <div [hidden]="!phonenumber.errors.required" >
+               Please enter the phonenumber
+            </div>
+            <div [hidden]="!phonenumber.errors.pattern">
+               Use the following formats XXXXXXXXXX or XXX-XXX-XXXX or XXX XXX XXX
+            </div>
+         </div>
+        </div><br>
+        <div class="form-group">
+          <input  class="myInput form-control" name="email" required type="text" #email="ngModel"  pattern="^[a-z0-9.%]+@[a-z0-9.-]+\.[a-z]{2,4}"[(ngModel)]="Customer.email"placeholder="Email" id="email2"  style="font-family: cursive;">
+          <div *ngIf="email.errors && (email.dirty ||email.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px;">
+            <div [hidden]="!email.errors.required" >
+               Please enter your Email
+            </div>
+            <div [hidden]="!email.errors.pattern">
+               Please enter valid Email
+            </div>
+         </div>
+        <div>
+          
+          <div class="form-group">
+          <input    class="myInput form-control" type="password" [(ngModel)]="Customer.password" #password="ngModel" required placeholder="Password (Minimum 8 characters)" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&]).{8,32}" id="password" name="password" style="font-family: cursive;">
+          <div *ngIf="password.errors && (password.dirty ||password.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px;">
+          <div [hidden]="!password.errors.required" >
+             Please enter a password
+          </div>
+          <div [hidden]="!password.errors.pattern">
+             Shoud contain Uppercase,Lowercase, Number and Character
+          </div>
+          </div>
+       </div>
+        <i class="show fa fa-eye" aria-hidden="true" onclick="toggle()"></i> 
+         
+        <i class="hide fa fa-eye-slash" onclick="toggle1()" ></i>
+    
+    
+        
+        <div class="form-group">
+          <input   class="myInput form-control" appConfirmEqualValidator="password" type="password" required placeholder="Confirm password" name="passwordcheck" [(ngModel)]="Customer.passwordcheck"#passwordcheck="ngModel" id="password2"  style="font-family: cursive;"><br>
+          <div *ngIf="passwordcheck.errors && (passwordcheck.dirty ||passwordcheck.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px; height:70px">
+            <div [hidden]="!passwordcheck.errors.required" >
+               Confirm Password is required
+            
+        </div>
+        <!-- <div *ngIf="passwordcheck.errors && (passwordcheck.dirty ||passwordcheck.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px; height:40px"> -->
+          
+            <div [hidden]="!passwordcheck.errors.notEqual && passwordcheck.errors.required">
+               Password and Confirm Password  doesn't match
+            </div>
+        </div>
+            
+    </div>
+        <div class="form-group">
+                <input type="submit" class="butt"  value="SIGN UP" [disabled]="signup.form.invalid" style="font-family: cursive;">
+        
+            </div></div>
+       
+            <div  class="col-lg-4"></div>
+        
+        </div>
+    
+    
+    

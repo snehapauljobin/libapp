@@ -1,0 +1,14 @@
+.banner{
+
+    background: radial-gradient(rgba(0,0, 0, 0.5), #152401),url(/assets/img/forbooks.jpg);
+    background-position: center; 
+    background-size: cover; 
+    height: 200px;
+    width:auto;
+    color:#fff;
+}
+h5,h4{
+    text-align:center;
+    font-family:cursive;
+    color:white;
+}
